@@ -1,0 +1,11 @@
+# Configuration
+.donezo-config.json
+
+# Folder for test assets (icon fonts to read in)
+assets
+
+# All the node modules
+node_modules
+
+# IDE files
+.idea

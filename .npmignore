@@ -1,0 +1,5 @@
+# Precompiled Source
+src/
+
+# Babel Config
+.babelrc

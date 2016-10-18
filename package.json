@@ -1,0 +1,19 @@
+{
+  "name": "donezo",
+  "version": "0.0.1",
+  "description": "Donezo the Elephant wants to make it easier to use icon-fonts. Put your icon fonts in a bundle and Donezo will cheerfully generate some scss for you.",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "bin": {
+    "donezo": "./lib/index.js"
+  },
+  "author": "Naomi Rubin at Cast Iron Coding",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "cheerio": "^0.22.0"
+  }
+}
