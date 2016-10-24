@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "repository": "https://github.com/castiron/Donezo.git",
   "scripts": {
-    "build": "babel src -d lib"
+    "build": "babel src -d lib",
+    "watch": "babel src --watch  --out-dir lib"
   },
   "bin": {
     "donezo": "./lib/index.js"

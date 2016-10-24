@@ -7,6 +7,7 @@ export default class Elephant {
     this.filename = filename;
     this.getFontFace = this.getFontFace.bind(this);
     this.getMixins = this.getMixins.bind(this);
+    this.convertDashToCamelCase = this.convertDashToCamelCase.bind(this);
   }
 
   getGlyphsList(listBack) {
@@ -37,6 +38,14 @@ export default class Elephant {
       // Run a callback as long as there are glyphs
       listBack(glyphs);
     });
+  }
+
+  convertDashToCamelCase(name) {
+    const camelName = name.replace(/-([a-z])/g, function (match, substring) {
+      return substring.toUpperCase();
+    });
+
+    return camelName;
   }
 
   getFontFace(name, path, rails) {
@@ -85,8 +94,15 @@ export default class Elephant {
     output += '// Donezo Generated Icon File:\n// File will be overwritten if regenerated\n\n';
     output += '// Icon Variables\n';
     output += '// --------------------------------------------------------\n';
+
     glyphs.forEach((glyph) => {
-      output += '$' + config.variablePrefix + glyph.name +
+      let glyphName = glyph.name;
+
+      if (config.dashToCamelCase) {
+        glyphName = this.convertDashToCamelCase(glyph.name);
+      }
+
+      output += '$' + config.variablePrefix + glyphName +
         ': \'\\' + glyph.hex + '\';\n';
     });
 
