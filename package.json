@@ -1,6 +1,6 @@
 {
   "name": "donezo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Donezo the Elephant wants to make it easier to use icon-fonts. Put your icon fonts in a bundle and Donezo will cheerfully generate some scss for you.",
   "main": "lib/index.js",
   "repository": "https://github.com/castiron/Donezo.git",
