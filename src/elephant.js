@@ -68,10 +68,10 @@ export default class Elephant {
     output = '@font-face {\n';
     output += `  font-family: \'${name}\';\n`;
     output += `  src: url(${getFontPath(name, path, rails, 'eot?#iefix')}) format(\'embedded-opentype\'),\n`;
-    output += `  url(${getFontPath(name, path, rails, 'woff')}) format(\'woff\'),\n`;
-    output += `  url(${getFontPath(name, path, rails, 'ttf')}) format(\'truetype\'),\n`;
-    output += `  url(${getFontPath(name, path, rails, 'svg')}) format(\'svg\');\n`;
-    output += '  font-weight: normal;\n  font-style: normal;\n';
+    output += `    url(${getFontPath(name, path, rails, 'woff')}) format(\'woff\'),\n`;
+    output += `    url(${getFontPath(name, path, rails, 'ttf')}) format(\'truetype\'),\n`;
+    output += `    url(${getFontPath(name, path, rails, 'svg')}) format(\'svg\');\n`;
+    output += '  font-style: normal;\n  font-weight: normal;\n';
     output += '}\n';
 
     return output;

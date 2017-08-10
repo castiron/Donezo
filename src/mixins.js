@@ -16,12 +16,12 @@ export default class Mixins {
     return '@mixin protoIcon {\n' +
         '  @include fontIcon;\n' +
         '  display: inline-block;\n' +
-        '  vertical-align: baseline;\n' +
         '  font-style: normal;\n' +
         '  font-weight: normal;\n' +
         '  font-variant: normal;\n' +
-        '  text-transform: none;\n' +
         '  line-height: 1;\n' +
+        '  text-transform: none;\n' +
+        '  vertical-align: baseline;\n' +
         '  speak: none;\n' +
         '}\n\n' +
         '@mixin iconPre($icon) {\n' +
